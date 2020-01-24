@@ -184,7 +184,7 @@ class AllureReporter extends WDIOReporter {
             return
         }
 
-        if (this.options.disableWebdriverStepsReporting || this.options.useCucumberStepReporter || this.isMultiremote) {
+        if (this.options.disableWebdriverStepsReporting || this.options.useCucumberStepReporter) {
             return
         }
 
@@ -196,7 +196,7 @@ class AllureReporter extends WDIOReporter {
     }
 
     onAfterCommand(command) {
-        if (!this.isAnyTestRunning() || this.isMultiremote) {
+        if (!this.isAnyTestRunning()) {
             return
         }
 
